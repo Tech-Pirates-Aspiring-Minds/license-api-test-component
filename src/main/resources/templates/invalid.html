@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!--  <h1 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h1> -->
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-md-6 p-5">
+            <p class="alert alert-danger" th:text="${message}" style="color:red"></p>
+            <form th:action="@{/login}" method="get">
+                <input class="btn btn-primary" type="submit" value="Go to Login Page" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

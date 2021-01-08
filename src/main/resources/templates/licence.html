@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <title>License</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 col-md-6 p-5">
+            <div class="card">
+                <div class="card-header p-2">
+                    <h5 class="card-title mb-0">Register with licence key</h5>
+                </div>
+                <div class="card-body">
+                <span th:if="${message != ''}"><div class="alert alert-info" th:text="${message}"></div></span>
+                    
+                    <form action="#" th:action="@{/licence}" th:object="${licenceData}" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-12">
+                                <label>Licence Key</label>
+                                <input class="form-control" type="text" th:field="*{key}" />
+                            </div>
+                        </div>
+                        <div class="form-actions d-flex justify-content-end">
+                            <input type="reset" value="Reset" class="btn btn-light border mr-2" />
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
